@@ -37,7 +37,7 @@
    - Request URL: 3단계에서 복사한 **웹 앱 URL** 입력
    - Subscribe to bot events: `message.channels` 추가
 4. **OAuth & Permissions** 메뉴:
-   - Bot Token Scopes: `channels:history`, `channels:read` 추가
+   - Bot Token Scopes: `channels:history`, `channels:read`, `chat:write` 추가
 5. 앱을 워크스페이스에 **설치** → Bot Token 복사 → CONFIG에 붙여넣기
 6. 감지할 채널에 봇 초대: `/invite @봇이름`
 

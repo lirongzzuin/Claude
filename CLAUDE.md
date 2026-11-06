@@ -44,6 +44,6 @@ Order numbers follow the pattern `YYYYMMDD-NNNNNNN` and are extracted only from 
 ## Key Design Decisions
 
 - **No external dependencies** — `Code.gs` uses only built-in GAS APIs (`SpreadsheetApp`, `UrlFetchApp`, `Utilities`, etc.).
-- **Duplicate handling** — controlled by `CONFIG.SHEETS.DUPLICATE_ACTION` (`skip`, `update`, or `none`). The duplicate key is always the order number column.
-- **Retry logic** — `CONFIG.API.MAX_RETRIES` and `CONFIG.API.RETRY_DELAY_MS` govern retry behavior in `fetchWithRetry_`.
+- **Duplicate handling** — controlled by `CONFIG.SHEETS.UPDATE_IF_DUPLICATE` (`true` updates the existing row, `false` always appends). The duplicate key column is set by `CONFIG.SHEETS.DUPLICATE_CHECK_COLUMN`.
+- **Retry logic** — `CONFIG.API.RETRY_COUNT` and `CONFIG.API.RETRY_DELAY_MS` govern retry behavior in `fetchWithRetry_`.
 - **Error reporting** — errors are categorized as `PARSE`, `API`, `SHEETS`, or `SYSTEM` and sent as Slack messages rather than thrown silently.

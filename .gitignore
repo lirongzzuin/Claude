@@ -1,2 +1,21 @@
+# OS / IDE
 .DS_Store
+Thumbs.db
+.idea/
+.vscode/
 .claude/
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+.clasprc.json
+
+# Python / Node
+__pycache__/
+*.pyc
+node_modules/
+*.log
